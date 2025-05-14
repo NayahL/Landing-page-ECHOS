@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo [S]</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Echo [S]</div>
+  <nav>
+    <ul>
+      <li><a href="#a-la-une">À la Une</a></li>
+      <li><a href="#flux-queer">Flux Queer</a></li>
+      <li><a href="#sessions">Sessions</a></li>
+      <li><a href="#queerscape">Événements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/160715_088_TechBackground1_1080p.mp442234.webm" type="video/webm">
+  </video>
+  <div class="content">
+    <h1>Créer, c’est exister.</h1>
+    <p>Echo [S] fait vibrer les identités queer par l’art numérique et sonore.</p>
+    <a href="#a-la-une" class="btn">Découvrir</a>
+  </div>
+</section>
+
+<section id="a-la-une" class="fade-in">
+  <h2>Voix Queer à l’avant-scène</h2>
+  <div class="video-grid">
+    <div class="video-item">
+      <video muted autoplay loop>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <h3>Nowayla - Pulse Live</h3>
+      <p>Performance brute entre glitch et émotion corporelle.</p>
+    </div>
+    <div class="video-item">
+      <video muted autoplay loop>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      </video>
+      <h3>Orou - L’art du VJ</h3>
+      <p>Entretien visuel sur l’expérimentation lumière-son-corps.</p>
+    </div>
+  </div>
+</section>
+
+<section id="flux-queer" class="fade-in">
+  <h2>Flux Queer</h2>
+  <div class="video-grid">
+    <div class="video-item">
+      <video muted autoplay loop>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <h3>Hyperpop Story</h3>
+      <p>Une plongée dans les sons DIY de la génération queer online.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sessions" class="fade-in">
+  <h2>Sessions Sonores</h2>
+  <div class="video-grid">
+    <div class="video-item">
+      <video muted autoplay loop>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      </video>
+      <h3>Ludvina Live</h3>
+      <p>Électro poésie immersive au festival Queertech.</p>
+    </div>
+  </div>
+</section>
+
+<section id="queerscape" class="fade-in">
+  <h2>Queerscape</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel-inner" id="carousel">
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/600x400/?queer,projection" alt="Projection Pulse Only">
+        <h3>PULSE.ONLY</h3>
+        <p>Films queer racisé·es à Marseille — 22 juin.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/600x400/?nft,digitalart" alt="NFT Drop MetaMuse">
+        <h3>MetaMuse</h3>
+        <p>Collection crypto-queer sur Tezos, visible en ligne.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/600x400/?music,techno" alt="Techno Parallèle">
+        <h3>Techno Parallèle</h3>
+        <p>Line-up 100% queer à Lyon pour une nuit immersive.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button onclick="moveSlide(-1)">←</button>
+    <button onclick="moveSlide(1)">→</button>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Rejoins la résonance</h2>
+  <form>
+    <label for="name">Prénom</label>
+    <input type="text" id="name" placeholder="Ton prénom" required />
+    <label for="email">Adresse e-mail</label>
+    <input type="email" id="email" placeholder="Ton e-mail" required />
+    <button type="submit">S’abonner</button>
+  </form>
+  <p>🎤 Tu veux créer avec nous ? <a href="mailto:contact@echo-s.media">Proposer un projet</a></p>
+</section>
+
+<footer>
+  <p>© Echo [S] 2025 — Créer, c’est résister.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
