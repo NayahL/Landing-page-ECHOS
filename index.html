@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description">
   <title>Echo [S]</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,9 +22,10 @@
   </nav>
 </header>
 
+<main>
 <section id="hero">
   <video autoplay muted loop playsinline>
-    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/160715_088_TechBackground1_1080p.mp442234.webm" type="video/webm">
+    <source src="vidéos/pride_event.mp4" type="video/mp4">
   </video>
   <div class="content">
     <h1>Créer, c’est exister.</h1>
@@ -107,16 +109,53 @@
 
 <section id="contact" class="fade-in">
   <h2>Rejoins la résonance</h2>
-  <form>
-    <label for="name">Prénom</label>
-    <input type="text" id="name" placeholder="Ton prénom" required />
-    <label for="email">Adresse e-mail</label>
-    <input type="email" id="email" placeholder="Ton e-mail" required />
-    <button type="submit">S’abonner</button>
-  </form>
-  <p>🎤 Tu veux créer avec nous ? <a href="mailto:contact@echo-s.media">Proposer un projet</a></p>
+  <div class="contact-columns">
+    <form>
+      <label for="firstname">Prénom</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Ton prénom" required />
+
+      <label for="lastname">Nom</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Ton nom" required />
+
+      <label for="pronouns">Pronoms</label>
+      <input type="text" id="pronouns" name="pronouns" placeholder="Ex : elle/il/iel" />
+
+      <label for="email">Adresse e-mail</label>
+      <input type="email" id="email" name="email" placeholder="Ton e-mail" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Dis-nous ce qui t’amène…" rows="4"></textarea>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">J’accepte la <a href="#">politique de confidentialité</a>.</label>
+      </div>
+
+      <button type="submit">S’abonner</button>
+    </form>
+    <div class="contact-side">
+<p>🎤 Tu veux créer avec nous ?</p>
+  <!-- Bouton pour proposer un projet par mail -->
+<a href="mailto:contact@echo-s.media" class="btn">Proposer un projet</a>
+
+<div class="contact-infos">
+   <!-- Numéro de téléphone cliquable (appelle sur mobile) -->
+  <p><strong>Téléphone :</strong> <a href="tel:+33123456789">01 23 45 67 89</a></p>
+  <!-- Adresse mail cliquable -->
+  <p><strong>Email :</strong> <a href="mailto:contact@echo-s.media">contact@echo-s.media</a></p>
+  <!-- Adresse physique des bureaux -->
+  <p><strong>Bureaux :</strong><br> 12 rue de l’Arc-en-Ciel, 75000 Paris</p>
+  <!-- Carte Google Maps intégrée pour l'adresse des bureaux -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=12+rue+de+l’Arc-en-Ciel,+Paris&output=embed"
+      width="100%" height="180" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
 </section>
 
+</main>
 <footer>
   <p>© Echo [S] 2025 — Créer, c’est résister.</p>
 </footer>

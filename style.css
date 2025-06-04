@@ -170,7 +170,7 @@ h1, h2 {
 }
 
 /* Formulaire */
-#contact form {
+/*#contact form {
   max-width: 500px;
   margin-bottom: 2rem;
 }
@@ -210,6 +210,125 @@ h1, h2 {
 
 #contact button:hover {
   background-color: var(--violet);
+}*/
+
+/* Section Contact : Deux colonnes, responsive */
+.contact-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem; /* Plus d'espace entre les colonnes */
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contact-columns form {
+  flex: 2 1 250px;
+  min-width: 220px;
+  max-width: 450px; /* largeur réduite */
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-columns form label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.contact-columns form input,
+.contact-columns form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-columns form input:focus,
+.contact-columns form textarea:focus {
+  border-color: var(--violet);
+  outline: none;
+}
+
+.contact-columns form .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.contact-columns form .checkbox-group label {
+  margin-left: 0.5em;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.contact-columns form button {
+  background-color: var(--orange);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.contact-columns form button:hover {
+  background-color: var(--violet);
+}
+
+.contact-side {
+  flex: 1 1 180px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.contact-side .btn {
+  margin-top: 1em;
+  display: inline-block;
+}
+
+/* Responsive : passe en colonne sur mobile */
+@media (max-width: 800px) {
+  .contact-columns {
+    flex-direction: column;
+  }
+  .contact-side {
+    margin-top: 2em;
+    align-items: stretch;
+  }
+}
+
+.contact-infos {
+  margin-top: 2em;
+  font-size: 1rem;
+  color: var(--nuit);
+  width: 100%;
+}
+
+.contact-infos a {
+  color: var(--violet);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-infos a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 1em;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 footer {
