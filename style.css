@@ -138,12 +138,28 @@ h1, h2 {
 }
 
 .carousel-item {
+
   flex: 0 0 100%;
   padding: 2rem;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* ajustez la hauteur selon vos besoins */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgba(206, 206, 206, 0.5);
+  line-height: 1.5; /* ajustez l'espacement entre les lignes de texte */
 }
 
 .carousel-item img {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -156,7 +172,7 @@ h1, h2 {
 
 .carousel-controls button {
   background-color: var(--orange);
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 0.6rem 1rem;
   margin: 0 0.5rem;
@@ -167,6 +183,16 @@ h1, h2 {
 
 .carousel-controls button:hover {
   background-color: var(--violet);
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url('images/Queer-Pulse-Only.jpeg');
+}
+.carousel-item:nth-child(2) {
+  background-image: url('images/Crypto.jpeg');
+}
+.carousel-item:nth-child(3) {
+  background-image: url('images/Soirée-Techno.jpeg');
 }
 
 /* Formulaire */
