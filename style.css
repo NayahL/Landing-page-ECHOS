@@ -33,7 +33,9 @@ header {
   z-index: 100;
 }
 
-
+.logo img{
+  width: 50%;
+}
 
 
 nav ul {
