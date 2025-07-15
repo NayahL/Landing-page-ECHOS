@@ -116,6 +116,22 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Carrousel section */
 #queerscape {
   background-color: var(--vert-pale);
@@ -140,7 +156,7 @@ h1, h2 {
 .carousel-item {
 
   flex: 0 0 100%;
-  padding: 2rem;
+  padding: 2rem; 
   text-align: center;
   background-size: cover;
   background-position: center;
