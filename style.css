@@ -436,7 +436,7 @@ h1, h2 {
 .contact-infos {
   margin-top: 2em;
   font-size: 1rem;
-  color: var(--nuit);
+  color: var(--blanc);
   width: 100%;
 }
 
@@ -450,6 +450,11 @@ h1, h2 {
   text-decoration: underline;
 }
 
+label {
+  color: var(--blanc);
+  font-weight: bold;
+}
+
 .map-container {
   margin-top: 1em;
   width: 100%;
@@ -460,7 +465,7 @@ h1, h2 {
 
 footer {
   background-color: var(--rose);
-  color: var(--rose);
+  color: var(--blanc);
   text-align: center;
   padding: 2rem;
 }
