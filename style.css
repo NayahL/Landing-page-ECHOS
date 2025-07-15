@@ -153,6 +153,48 @@ h1, h2 {
 
 /*section flux queer*/
 
+  .spotify-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .spotify-item {
+    flex: 0 0 auto;
+    width: 300px;
+    scroll-snap-align: start;
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .spotify-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+  }
+
+  .spotify-item p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .spotify-item a {
+    color: #1db954;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .spotify-item a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* ratio 16:9 */
@@ -164,6 +206,7 @@ h1, h2 {
 
 .video-container iframe {
   position: absolute;
+  margin:10; 
   top: 0;
   left: 0;
   width: 100%;
