@@ -1,9 +1,10 @@
 :root {
-  --rose: #f2ecec;
+  --rose: #EA516F;
+  --blanc: #f2ecec;
   --nuit: #132436;
   --orange: #e05a29;
   --violet: #9c90fc;
-  --jaune: #FCCF24;
+  --vert-pale: #00AFB9;
   --font-main: 'Inter', sans-serif;
 }
 
@@ -15,15 +16,14 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--rose);
+  background-color: var(--nuit);
   color: var(--nuit);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 header {
-  background-color: var(--nuit);
-  color: var(--rose);
+  color: var(--blanc);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -40,12 +40,12 @@ nav ul {
 }
 
 nav a {
-  color: var(--rose);
+  color: var(--blanc);
   text-decoration: none;
   font-weight: bold;
 }
 nav a:hover {
-  color: var(--jaune);
+  color: var(--rose);
 }
 
 section {
@@ -54,7 +54,7 @@ section {
 }
 
 h1, h2 {
-  color: var(--nuit);
+  color: var(--blanc);
   margin-bottom: 1rem;
 }
 
@@ -98,7 +98,7 @@ h1, h2 {
 .btn:hover {
   background-color: var(--violet);
 }
-
+/*section à la une*/
 .tilted-list {
   list-style: none;
   padding: 0;
@@ -123,13 +123,11 @@ h1, h2 {
 }
 
 .tilted-list .name {
-  font-size: 2.5em;            /* Noms plus grands */
+  font-size: 4rem;            /* Noms plus grands */
   font-weight: bold;
   display: block;
   padding: 0.7em 2em;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  color: var(--blanc);
 }
 
 .tilted-list .profile-pic {
@@ -151,6 +149,9 @@ h1, h2 {
   opacity: 1;
   transform: translateX(-50%) scale(1.05);
 }
+/*fin section à la une*/
+
+/*section flux queer*/
 
   .spotify-carousel {
     display: flex;
@@ -200,6 +201,7 @@ h1, h2 {
   height: 0;
   overflow: hidden;
   max-width: 100%;
+  background-color: var(--orange);
 }
 
 .video-container iframe {
@@ -210,15 +212,18 @@ h1, h2 {
   width: 100%;
   height: 100%;
 }
+/* fin section flux queer */
 
 /* Carrousel section */
 #queerscape {
   background-color: var(--vert-pale);
+  width: 100%;
 }
 
 .carousel-wrapper {
   position: relative;
   width: 100%;
+  height: 80%;
   max-width: 960px;
   margin: 0 auto;
   overflow: hidden;
@@ -239,7 +244,7 @@ h1, h2 {
   text-align: center;
   background-size: cover;
   background-position: center;
-  height: 300px; /* ajustez la hauteur selon vos besoins */
+  height: 400px; /* ajustez la hauteur selon vos besoins */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -449,7 +454,7 @@ h1, h2 {
 }
 
 footer {
-  background-color: var(--nuit);
+  background-color: var(--rose);
   color: var(--rose);
   text-align: center;
   padding: 2rem;
