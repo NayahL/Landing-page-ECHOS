@@ -15,3 +15,24 @@ document.addEventListener("scroll", () => {
     }
   });
 });
+
+//Slider pour la bannière
+
+
+
+  const carousel = document.getElementById('spotify-carousel');
+  const toggleBtn = document.getElementById('toggleScroll');
+
+  let isPaused = false;
+
+  toggleBtn.addEventListener('click', () => {
+    if (isPaused) {
+      carousel.style.animationPlayState = 'running';
+      toggleBtn.textContent = '⏸ Pause';
+    } else {
+      carousel.style.animationPlayState = 'paused';
+      toggleBtn.textContent = '▶️ Reprendre';
+    }
+    isPaused = !isPaused;
+  });
+

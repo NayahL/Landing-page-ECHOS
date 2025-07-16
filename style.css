@@ -35,7 +35,7 @@ header {
   background-color: var(--nuit);
 }
 
-.logo img{
+.logo img {
   width: 50%;
 }
 
@@ -108,6 +108,41 @@ h2 {
   background-color: var(--violet);
 }
 
+/* Début Banniere animé*/
+
+#banniere-voix-queer {
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.banniere-slider {
+  display: flex;
+  width: 200%;
+  /* Deux images côte à côte */
+  animation: slide-banner 12s linear infinite;
+}
+
+.banner-image {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes slide-banner {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Fin Banniere animé*/
+
 /* Section à la une */
 .tilted-list {
   list-style: none;
@@ -136,7 +171,8 @@ h2 {
 .tilted-list .name {
   font-size: 4.5rem;
   font-weight: bold;
-  color: var(--blanc); /* Assure-toi que cette variable est bien définie */
+  color: var(--blanc);
+  /* Assure-toi que cette variable est bien définie */
   display: block;
   z-index: 1;
   position: relative;
@@ -144,7 +180,8 @@ h2 {
 
 .tilted-list .profile-pic {
   position: absolute;
-  left: 110%; /* À droite du texte */
+  left: 110%;
+  /* À droite du texte */
   top: 50%;
   transform: translateY(-50%) scale(0.95);
   width: 120px;
@@ -166,18 +203,22 @@ h2 {
 
 /*section flux queer*/
 
+.spotify-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .spotify-carousel {
+   overflow: hidden;
   display: flex;
-  overflow-x: auto;
   gap: 20px;
-  padding: 10px 0;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  width: max-content;
+  animation: scrollSpotify 2s linear infinite;
 }
 
 .spotify-item {
-  flex: 0 0 auto;
-  width: 300px;
+  flex: 0 0 600px;
   scroll-snap-align: start;
   background: #f7f7f7;
   border-radius: 12px;
@@ -185,26 +226,40 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.spotify-item h3 {
-  margin: 10px 0 5px;
-  font-size: 1rem;
+@keyframes scrollSpotify {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
-.spotify-item p {
-  margin: 0;
-  font-size: 0.9rem;
+.carousel-controls {
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.spotify-item a {
-  color: #1db954;
-  text-decoration: none;
+#toggleScroll {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.spotify-item a:hover {
-  text-decoration: underline;
+#toggleScroll:hover {
+  background-color: var(--violet);
 }
-
 
 
 
@@ -506,4 +561,30 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Début bouton remettre en haut*/
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  /* caché par défaut */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+/*Fin bouton remettre en haut*/
+
+#backToTop:hover {
+  background-color: var(--violet);
+  transform: scale(1.1);
 }
