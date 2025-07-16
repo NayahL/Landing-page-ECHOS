@@ -108,65 +108,61 @@ h2 {
   background-color: var(--violet);
 }
 
-/*section à la une*/
+/* Section à la une */
 .tilted-list {
   list-style: none;
   padding: 0;
   margin: 2em 0;
   display: flex;
   flex-direction: column;
-  /* Aligne verticalement */
   gap: 2em;
   align-items: center;
-  /* Centre horizontalement */
   justify-content: center;
-  /* Centre verticalement */
-  min-height: 60vh;
-  /* Hauteur minimum pour centrer dans la section */
+  min-height: 35vh;
 }
 
 .tilted-list li {
   position: relative;
   transform: rotate(-1deg);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
   cursor: pointer;
+  padding: 1em 2em;
 }
 
 .tilted-list li:hover {
-  transform: rotate(0deg) scale(1.05);
+  transform: rotate(0deg) scale(1.4);
 }
 
 .tilted-list .name {
-  font-size: 4rem;
-  /* Noms plus grands */
+  font-size: 4.5rem;
   font-weight: bold;
+  color: var(--blanc); /* Assure-toi que cette variable est bien définie */
   display: block;
-  padding: 0.7em 2em;
-  color: var(--blanc);
+  z-index: 1;
+  position: relative;
 }
 
 .tilted-list .profile-pic {
   position: absolute;
-  left: 50%;
-  top: 110%;
-  transform: translateX(-50%) scale(0.95);
+  left: 110%; /* À droite du texte */
+  top: 50%;
+  transform: translateY(-50%) scale(0.95);
   width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .tilted-list li:hover .profile-pic {
   opacity: 1;
-  transform: translateX(-50%) scale(1.05);
+  transform: translateY(-50%) scale(1.05);
 }
 
-/*fin section à la une*/
+
 
 /*section flux queer*/
 
