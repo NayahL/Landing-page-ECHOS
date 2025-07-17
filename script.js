@@ -20,19 +20,40 @@ document.addEventListener("scroll", () => {
 
 
 
-  const carousel = document.getElementById('spotify-carousel');
-  const toggleBtn = document.getElementById('toggleScroll');
+
+  const carousel = document.getElementById("spotify-carousel");
+  const toggleBtn = document.getElementById("toggleScroll");
+
+  // Clone les éléments pour l'effet infini
+  const items = [...carousel.children];
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    carousel.appendChild(clone);
+  });
 
   let isPaused = false;
 
-  toggleBtn.addEventListener('click', () => {
-    if (isPaused) {
-      carousel.style.animationPlayState = 'running';
-      toggleBtn.textContent = '⏸ Pause';
-    } else {
-      carousel.style.animationPlayState = 'paused';
-      toggleBtn.textContent = '▶️ Reprendre';
-    }
+  toggleBtn.addEventListener("click", () => {
     isPaused = !isPaused;
+    carousel.style.animationPlayState = isPaused ? "paused" : "running";
+    toggleBtn.textContent = isPaused ? "▶ Reprendre" : "⏸ Pause";
   });
 
+
+// Bouton retour en haut
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

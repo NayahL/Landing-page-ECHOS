@@ -207,19 +207,19 @@ h2 {
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 1rem 0;
 }
 
 .spotify-carousel {
-   overflow: hidden;
   display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
-  width: max-content;
-  animation: scrollSpotify 2s linear infinite;
+  animation: scrollSpotify 4s linear infinite;
 }
 
 .spotify-item {
-  flex: 0 0 600px;
-  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 300px;
   background: #f7f7f7;
   border-radius: 12px;
   padding: 10px;
@@ -228,18 +228,28 @@ h2 {
 
 @keyframes scrollSpotify {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
-
-50% {
-    transform: translate3d(0, 0, 0);
-  }
-
-
   100% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
   }
 }
+
+#toggleScroll {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#toggleScroll:hover {
+  background-color: var(--violet);
+}
+
 
 .carousel-controls {
   text-align: center;
@@ -584,7 +594,31 @@ footer {
 
 /*Fin bouton remettre en haut*/
 
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: linear-gradient(135deg, var(--rose), var(--violet), var(--orange), var(--vert-pale));
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.5s ease;
+}
+
 #backToTop:hover {
-  background-color: var(--violet);
   transform: scale(1.1);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
