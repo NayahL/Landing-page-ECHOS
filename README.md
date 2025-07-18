@@ -1,104 +1,40 @@
-# Landing page ECHOs
- 
-# 🌈 Echo [S] – Média Queer Sonore et Visuel
+🧠 Le(s) contexte(s) d’utilisation des outils d’IA génératives
+Dans le cadre de mon projet web Echo [S], dédié aux identités queer et à l’expression artistique, j’ai utilisé un outil d’IA générative (comme ChatGPT) pour :
 
-> Créer, c’est exister. Créer, c’est résister.
+Obtenir une aide technique pour le développement web via les sites annexes d'IA comme Copilot ou ChatGPT pour l'HTML, CSS, JavaScript.
 
-Echo [S] est une plateforme numérique dédiée aux identités queer à travers l’art sonore, visuel et interactif. Ce projet agit comme une caisse de résonance artistique et militante, un carrefour pour les artistes LGBTQIA+ et leurs publics.
+Clarifier nos concepts techniques (comme les carrousels, les animations IntersectionObserver, ou la validation de formulaire JS).
 
----
+🛠️ Un usage concret de l’IA : exemple de prompt, attentes vs réalité
+Prompt utilisé :
 
-## ✨ Objectifs
+Je veux réaliser un carrousel de Spotify avec une bar qui scroll et qui boucle
 
-- Valoriser les **voix et créations queer** sous toutes leurs formes.
-- Proposer une **expérience web immersive**, accessible et inclusive.
-- Fédérer une **communauté artistique** autour de la création, du son et du militantisme.
+Attentes :
+Une bar qui va défiler et une fois fini elle recommence avec une animation fluide
 
----
+Résultat : Sachant qu'il n'y a pas beaucoup de musiques l'animation redémarre en boucle et fais un résultat pas fluide et moche
 
-## 🧩 Composants principaux du site
+Analyse critique de la réponse apportée par l’IA
+Points positifs :
+L’IA comprend rapidement le besoin et fournit un code générique et modulaire.
 
-### 🔊 `À la Une` – Portraits d’artistes
+La rapidité de génération a considérablement accéléré le développement.
 
-Une section dédiée à la mise en lumière d’artistes queer, sous forme de portraits visuels et animés.
+Il manquait une prise en compte du responsive design dans certaines propositions (ex. : scroll horizontal sur mobile).
 
-- Format : liste dynamique avec effets de survol
-- Animation : rotation + apparition d’image au hover
-- Données : `images/`, noms affichés
+L’IA n’a pas détecté certaines incohérences d’attributs dans mes fichiers HTML (comme un id mal orthographié).
 
----
+📚 Notions apprises grâce à l’IA
+Voici quelques acquis rendus possibles par son utilisation :
 
-### 🎧 `Flux Queer` – Musiques Spotify
+Meilleure compréhension de la difficultés a réaliser certaines spécifications via les prompts.
 
-Carrousel infini de morceaux issus de la scène queer actuelle, intégrés via l’API Spotify.
+Structuration efficace d’un slider Spotify infini.
 
-- Format : iframe Spotify
-- Animation : scroll horizontal auto + bouton Pause/Play
-- Objectif : découverte musicale queer
+Différence entre “animation CSS” et manipulation JS dynamique.
 
----
+Réflexion critique sur l’expérience utilisateur inclusive dans un site culturel queer.
 
-### 🎥 `Sessions` – Vidéos live
-
-Intégration de capsules vidéos de performances live d’artistes queer (ex. : Thea à la Cigale).
-
-- Format : iframe YouTube
-- Design : responsive, en pleine largeur
-- Objectif : créer une expérience sensible
-
----
-
-### 📍 `Queerscape` – Événements à venir
-
-Carrousel d'événements queer à venir : expositions, soirées, projections, etc.
-
-- Format : carousel vertical avec boutons de navigation
-- Données dynamiques à terme (future API ?)
-
----
-
-### 💌 `Contact` – Formulaire & Projets
-
-Un espace d'échange pour :
-
-- **S’abonner à la newsletter**
-- **Contacter l’équipe**
-- **Proposer un projet artistique**
-
----
-
-## 💻 Technologies utilisées
-
-- HTML5 / CSS3
-- JavaScript (vanilla)
-- Spotify Embed API
-- YouTube Embed
-- Responsive Design
-- Animation CSS & IntersectionObserver
-
----
-
-## 🚀 À venir
-
-- Multilingue (FR/EN)
-- Système de blog ou interviews longues
-
-
----
-
-## 📬 Contact
-
-Pour toute collaboration artistique ou diffusion :  
-📧 **[contact@echo-s.media](mailto:contact@echo-s.media)**  
-🌐 **[https://echo-s.media](https://echo-s.media)** *(en construction)*
-
----
-
-## 🏳️‍⚧️ Crédits
-
-Echo [S] est un projet communautaire, queer et intersectionnel.  
-Merci aux artistes, activistes, et rêveur·euse·s qui nous inspirent.
-
----
-
-> 📝 *Ce projet est ouvert à la contribution. N’hésitez pas à proposer, partager, coder, créer.*  
+✅ Conclusion
+L’usage de l’IA générative dans ce projet m’a permis de gagner en efficacité, autonomie et compréhension technique. Bien qu’elle ne remplace pas le fait que l'on doit vérifier notre code etc...

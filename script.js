@@ -135,3 +135,4 @@ function toggleSection(sectionId) {
     icon.textContent = "🙈"; // œil fermé
   }
 }
+
