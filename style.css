@@ -545,6 +545,15 @@ label {
   font-weight: bold;
 }
 
+#form-message {
+  margin-top: 2em;
+  padding: 1em;
+  color: var(--blanc);
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
 .map-container {
   margin-top: 1em;
   width: 100%;

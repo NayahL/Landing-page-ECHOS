@@ -57,3 +57,47 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// Sélectionne le formulaire sur la page
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Empêche l'envoi classique du formulaire
+
+  // Récupère les valeurs des champs
+  const firstname = document.getElementById('firstname').value.trim();
+  const lastname = document.getElementById('lastname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const consent = document.getElementById('consent').checked;
+
+  let valid = true;   // Variable pour savoir si le formulaire est valide
+  let message = '';   // Message à afficher en cas d'erreur
+
+  // Vérifie si le prénom est rempli
+  if (!firstname) { valid = false; message += 'Prénom requis.<br>'; }
+
+  // Vérifie si le nom est rempli
+  if (!lastname) { valid = false; message += 'Nom requis.<br>'; }
+
+  // Vérifie si l'email est au bon format
+  if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+    valid = false;
+    message += 'Email invalide.<br>';
+  }
+
+  // Vérifie si la case consentement est cochée
+  if (!consent) { valid = false; message += 'Veuillez accepter la politique de confidentialité.<br>'; }
+
+  // Sélectionne la div pour afficher le message
+  const msgDiv = document.getElementById('form-message');
+
+  if (valid) {
+    // Si tout est OK, affiche le message de confirmation 
+    msgDiv.style.backgroundColor = '#EA516F'; // Change la couleur de fond
+    msgDiv.innerHTML = 'Merci de rejoindre la résonnance !';
+    msgDiv.style.display = 'block';//Affiche le message
+  } else {
+    // Sinon, affiche les erreurs en rouge
+    msgDiv.style.color = 'red';
+    msgDiv.innerHTML = message;
+    msgDiv.style.display = 'block';
+      }
+});
