@@ -135,4 +135,18 @@ function toggleSection(sectionId) {
     icon.textContent = "🙈"; // œil fermé
   }
 }
+<
+// Gestion de la FAQ
+document.querySelectorAll('.faq-question').forEach(btn => { // Sélectionne tous les boutons de la FAQ
+  btn.addEventListener('click', function() { // Ajoute un écouteur d'événement pour chaque bouton
+    const answer = this.nextElementSibling;
+    answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+  });
+});
 
+window.addEventListener('scroll', function() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('site-progress-bar').style.width = scrolled + '%';
+});

@@ -12,6 +12,11 @@
 
 <body>
 
+<!-- Ajoute tout en haut du <body> -->
+<div id="site-progress-container">
+  <div id="site-progress-bar"></div>
+</div>
+  
   <header>
 
     <div class="logo">
@@ -25,7 +30,7 @@
     <span></span>
   </button>
 
-    <nav>
+    <nav id="main-nav">
       <ul>
         <li><a href="#a-la-une">À la Une</a></li>
         <li><a href="#flux-queer">Flux Queer</a></li>
@@ -90,6 +95,13 @@
 
 <section id="flux-queer" class="fade-in">
   <h2>Flux Queer</h2>
+
+
+  
+  <!-- Carrousel masqué par défaut -->
+  <div class="spotify-carousel-wrapper" id="flux-queer-content" style="display: none;">
+    <div class="spotify-carousel" id="spotify-carousel">
+
   <div class="spotify-carousel-wrapper">
     <div class="spotify-carousel" id="spotify-carousel">
 
@@ -158,6 +170,7 @@
 
     </div>
   </div>
+
 
   <div class="carousel-controls">
     <button id="toggleScroll">⏸ Pause</button>
@@ -257,6 +270,29 @@
             </div>
           </div>
     </section>
+
+    <!-- Ajoute cette section où tu veux dans index.html, par exemple avant le footer -->
+<section id="faq" class="fade-in">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <button class="faq-question">Comment participer à Echo [S] ?</button>
+    <div class="faq-answer" style="display:none;">
+      <p>Tu peux nous contacter via le formulaire ou proposer un projet par mail. Toutes les identités sont les bienvenues !</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">Où ont lieu les événements ?</button>
+    <div class="faq-answer" style="display:none;">
+      <p>Les événements Echo [S] ont lieu principalement à Paris et Lyon, mais aussi en ligne.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">Faut-il être artiste pour rejoindre Echo [S] ?</button>
+    <div class="faq-answer" style="display:none;">
+      <p>Non, toute personne queer ou alliée intéressée par l’art et le son peut participer !</p>
+    </div>
+  </div>
+</section>
 
   </main>
   <footer>
