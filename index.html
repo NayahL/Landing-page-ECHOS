@@ -50,23 +50,31 @@
 
 
 
-    <section id="a-la-une" class="fade-in">
-      <h2>Voix Queer à l’avant-scène</h2>
-      <ul class="tilted-list">
-        <li>
-          <span class="name">Nowayla</span>
-          <img src="images/Nowayla.png" alt="Nowayla" class="profile-pic" />
-        </li>
-        <li>
-          <span class="name">Orou</span>
-          <img src="images/Orou.jpg" alt="Orou" class="profile-pic" />
-        </li>
-        <li>
-          <span class="name">Ludvina</span>
-          <img src="images/Ludvina.png" alt="Ludvina" class="profile-pic" />
-        </li>
-      </ul>
-    </section>
+<section id="a-la-une" class="fade-in">
+  <div class="toggle-header" style="display: flex; align-items: center; gap: 10px; cursor: pointer;" onclick="toggleSection('a-la-une')">
+    <h2 style="margin: 0;">Voix Queer à l’avant-scène</h2>
+    <span id="toggle-icon-a-la-une" style="font-size: 1.2em;">👁</span>
+  </div>
+
+  <div id="content-a-la-une">
+    <ul class="tilted-list">
+      <li>
+        <span class="name">Nowayla</span>
+        <img src="images/Nowayla.png" alt="Nowayla" class="profile-pic" />
+      </li>
+      <li>
+        <span class="name">Orou</span>
+        <img src="images/Orou.jpg" alt="Orou" class="profile-pic" />
+      </li>
+      <li>
+        <span class="name">Ludvina</span>
+        <img src="images/Ludvina.png" alt="Ludvina" class="profile-pic" />
+      </li>
+    </ul>
+  </div>
+</section>
+
+
 
     <!-- Début Carrousel Musiques Spotify-->
 

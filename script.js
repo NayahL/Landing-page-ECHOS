@@ -16,6 +16,26 @@ document.addEventListener("scroll", () => {
   });
 });
 
+// Animation au scroll avec IntersectionObserver (plus performant)
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animation une seule fois
+      }
+    });
+  },
+  {
+    threshold: 0.1
+  }
+);
+
+// Observer tous les éléments avec la classe fade-in
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
 //Slider pour la bannière
 
 
@@ -57,3 +77,17 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+function toggleSection(sectionId) {
+  const content = document.getElementById(`content-${sectionId}`);
+  const icon = document.getElementById(`toggle-icon-${sectionId}`);
+  
+  if (content.style.display === "none") {
+    content.style.display = "block";
+    icon.textContent = "👁"; // œil ouvert
+  } else {
+    content.style.display = "none";
+    icon.textContent = "🙈"; // œil fermé
+  }
+}
+
